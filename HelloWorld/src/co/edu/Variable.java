@@ -21,6 +21,7 @@ public class Variable {
 //		이력변경추가 2022.07.01 12:55
 		
 		// 깃에서 수정한 내용입니다.
+		System.out.println("깃에서 작업함");
 	}
 
 }
