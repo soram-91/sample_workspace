@@ -16,32 +16,9 @@ public class Variable {
 //		c1++; // int 연산. 
 //		for (int i=0; i<25; i++) {
 			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
-			System.out.println(c1++);
 //			}
+
+//		이력변경추가 2022.07.01 12:55
 	}
 
 }
