@@ -29,9 +29,9 @@ public class Example04 {
 				System.out.println("더 큰 수 입니다.");
 				inputVal = scn.nextInt();
 			}
-			System.out.println("end of prog.");
+			
 			
 		}
-
+		System.out.println("end of prog.");
 	}
 }
