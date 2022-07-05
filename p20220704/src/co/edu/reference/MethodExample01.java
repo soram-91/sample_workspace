@@ -22,7 +22,7 @@ public class MethodExample01 {
 	// 2 x 1 = 2  3 x 1 = 3  4 x 1 = 4
 	// 2 x 2 = 2  3 x 2 = 6  4 x 2 = 8
 	
-	public static void gugudan(int dan) {
+	public static void gugudan(int num) {
 		for (int i = 2; i <= 9; i++) {
 			for (int j = 1; j <= i ; j++) {
 				System.out.printf("%d x %d = %d\t", i, j, (i*j));

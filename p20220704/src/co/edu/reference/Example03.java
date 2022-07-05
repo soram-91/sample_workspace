@@ -7,5 +7,13 @@ public class Example03 {
 			int result = 3 * i;
 			System.out.println("3x" + i + "=" + result);
 		}
+		int max = 0;
+		int[] ary = { 1, 5, 3, 8, 2 };
+		
+		for(int i =0; i < ary.length ; i++) {
+			if(max < ary[i]) {
+				max = ary[i];
+			} 
+		} System.out.println(max);
 	}
 }
