@@ -14,7 +14,7 @@ public class Exam03 {
 
 		int[] array = new int[3];
 				
-		int min = 0;
+		int min = 100;
 		int sum = 0;
 				
 		for (int i = 0; i < array.length; i++) {

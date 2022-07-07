@@ -11,5 +11,20 @@ public class Exam05 {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		String[] fruits = { "사과", "딸기", "감", "수박", "포도", "복숭아" };
+		
+		while (true) {
+			int i = 0;
+			System.out.println("과일 이름을 입력하세요>> ");
+			String fruit = scn.nextLine();
+			if (fruit.equals(fruits[i])) {
+				System.out.println("과일 이름 >" + fruit);
+				System.out.println();
+				
+			}
+			System.out.println("찾는 값이 없습니다.");
+			break;
+
+		}
+
 	}
 }
