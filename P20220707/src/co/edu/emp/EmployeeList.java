@@ -1,5 +1,6 @@
 package co.edu.emp;
 
+import java.util.Calendar;
 import java.util.Scanner;
 
 /*
@@ -77,7 +78,7 @@ public class EmployeeList {
 	
 	// 말일 정보.
 	private int getLastDate(int mon) {
-		switch(mon) {
+/*		switch(mon) {
 		case 5:
 			return 31;
 		case 6:
@@ -88,12 +89,16 @@ public class EmployeeList {
 			return 31;
 		default:
 			return 30;
-		}
+		} */
+		Calendar cal = Calendar.getInstance();
+		cal.set(mon-1, 1);
+		
+		return cal.getActualMaximum(Calendar.DATE);
 	}
 	
 	// 1일의 요일정보.
 	private int getDayInfo(int mon) {
-		switch(mon) {
+/*		switch(mon) {
 		case 5:
 			return 0;
 		case 6:
@@ -104,8 +109,12 @@ public class EmployeeList {
 			return 1;
 		default:
 			return 0;
+		} */
+		Calendar cal = Calendar.getInstance();
+		cal.set(2022, mon, 1);
+		return cal.get(Calendar.DAY_OF_WEEK);
 		}
-	}
+	
 	// 달력.
 	public void showCalendar() {
 		System.out.println("월을 입력>>> ");
