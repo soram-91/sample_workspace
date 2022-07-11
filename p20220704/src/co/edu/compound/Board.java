@@ -4,7 +4,8 @@ import java.util.Date;
 
 /*
  *  게시글 한건의 정보.
- *  게시글 제목 / 내용 / 작성자 / 작성일시 / 조회수
+ *  등록 / 조회/ 수정/ 삭제/ 리스트
+ *  
  */
 public class Board {
 	// 필드.
@@ -13,7 +14,7 @@ public class Board {
 	private String writer;
 	private Date createDate;
 	private int hitCount;
-	
+
 	
 	// 생성자.
 
@@ -34,6 +35,7 @@ public class Board {
 	public int getHitCount() {
 		return hitCount;
 	}
+
 	public void setTitle(String title) {
 		this.title = title;
 	}

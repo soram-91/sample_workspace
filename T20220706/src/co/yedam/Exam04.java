@@ -11,7 +11,7 @@ public class Exam04 {
 		int i = (int) (Math.random() * 100)+1;
 		int[] array = new int[6];
 
-		int min = 0;
+		int min = 100;
 		int max = 0;
 		for (i = 0; i < array.length; i++) {
 			if (array[i] > max) {

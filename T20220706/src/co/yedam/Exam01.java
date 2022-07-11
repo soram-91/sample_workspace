@@ -7,8 +7,8 @@ package co.yedam;
  */
 public class Exam01 {
 	public static void main(String[] args) {
-		int num1 = 0;
-		int num2 = 0;
+		int num1 = 35;
+		int num2 = 27;
 		if (num1 > num2) {
 			int result = num1 - num2;
 			System.out.println(result);

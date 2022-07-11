@@ -4,7 +4,9 @@ import java.util.Date;
 import java.util.Scanner;
 
 /*
- * 등록/ 조회/ 수정/ 삭제/ 리스트 
+ * 등록/ 조회/ 수정/ 삭제/ 리스트
+ * id:user1, paswd: 1212=> 로그인 되었습니다!!
+ * 						=> 아이디, 비번을 확인하세요!! 
  */
 public class BoardApp {
 
@@ -13,6 +15,19 @@ public class BoardApp {
 		Scanner scn = new Scanner(System.in);
 
 		boolean run = true;
+		// 로그인 처리 기능.
+		
+		while (run) { // for(int i = 1 ; i != 2 ;)
+			System.out.println("아이디를 입력하세요>> ");
+			String id = scn.nextLine();
+			System.out.println("비밀번호를 입력하세요>> ");
+			String pw = scn.nextLine();
+			if(id.equals("user1") && pw.equals("1212")) {
+				System.out.println("로그인 되었습니다!!");
+				System.out.println();
+				break;
+			} System.out.println("아이디, 비번을 확인하세요!! ");
+		}
 
 		while (run) {
 			System.out.println("1.등록 2.조회 3.수정 4.삭제 5.리스트 6.종료");
@@ -74,7 +89,7 @@ public class BoardApp {
 						String changeContent = scn.nextLine();
 						boards[i].setContent(changeContent);
 						System.out.println("정상적으로 처리되었습니다.");
-						}
+					}
 				}
 			} else if (selectNo == 4) {
 // 				삭제.
