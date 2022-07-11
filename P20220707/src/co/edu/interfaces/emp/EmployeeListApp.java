@@ -30,6 +30,6 @@ public class EmployeeListApp {
 				break;
 			}
 		} // end of while
-		System.out.println("포르개름 종료.");
+		System.out.println("포르그램 종료.");
 	}
 }
