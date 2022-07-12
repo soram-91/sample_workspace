@@ -25,9 +25,9 @@ public class Example01 {
 		isTrue = myAge > yourAge;
 		
 		if (isTrue) {
-			System.out.println("나의 나의가 더 많다.");
+			System.out.println("나의 나가 더 많다.");
 		}else {
-			System.out.println("나의 나의가 더 적다.");
+			System.out.println("나의 나가 더 적다.");
 		}
 		
 		// float, double : double default.

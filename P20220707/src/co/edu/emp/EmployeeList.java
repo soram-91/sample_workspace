@@ -18,7 +18,8 @@ public class EmployeeList {
 	public static EmployeeList getInstance() {
 		return instance;
 	}
-
+	
+	
 	// 배열
 	Employee[] list; // 사원 배열.
 	int empNum; // 사원 수.

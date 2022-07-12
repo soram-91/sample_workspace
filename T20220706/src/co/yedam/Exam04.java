@@ -23,7 +23,7 @@ public class Exam04 {
 				min = array[i];
 			} 
 		}
-		System.out.println("제일 큰값: " + max + ", 가장 작은 값: " + min);
+		System.out.println("가장 큰값: " + max + ", 가장 작은 값: " + min);
 
 	}
 }
