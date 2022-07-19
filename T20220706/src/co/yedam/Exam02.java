@@ -12,11 +12,14 @@ public class Exam02 {
 		Scanner scn = new Scanner(System.in);
 		int num1 = 0;
 		int num2 = 0;
-		num1 = scn.nextInt();
-		num2 = scn.nextInt();
-		if(num1 > num2) {
-			double result =(double) num1 / num2;
-			System.out.printf("%d를 %d로 나누면 %.1f 입니다.",num1, num2,result);
+		double scnNo1 = Double.parseDouble(scn.nextLine());
+		double scnNo2 = Double.parseDouble(scn.nextLine());
+		if (scnNo1 < scnNo2) {
+			double result1 = (double)(scnNo2/scnNo1);
+			System.out.printf("%.1f",result1);
+		} else if (scnNo1 > scnNo2) {
+			double result2 = (double)(scnNo1/scnNo2);
+			System.out.printf("%.1f",result2);
 		}
 
 	}
