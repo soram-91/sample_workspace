@@ -15,8 +15,11 @@ public class Exam02 {
 		num1 = scn.nextInt();
 		num2 = scn.nextInt();
 		if(num1 > num2) {
-			double result =(double) num1 / num2;
-			System.out.printf("%d를 %d로 나누면 %.1f 입니다.",num1, num2,result);
+			double result1 =(double) num1 / num2;
+			System.out.printf("%d를 %d로 나누면 %.1f 입니다.",num1, num2,result1);
+		} else if ( num1 < num2) {
+			double result2 =(double) num2 / num1;
+			System.out.printf("%d를 %d로 나누면 %.1f 입니다.",num2, num1,result2);
 		}
 
 	}

@@ -8,8 +8,8 @@ package co.yedam;
  */
 public class Exam04 {
 	public static void main(String[] args) {
-		int i = (int) (Math.random() * 100)+1;
-		int[] array = new int[6];
+		int i = (int) (Math.random() * 100)+1;	// 1~100 의 임의의 값 생성.
+		int[] array = new int[6];				// 배열(크기 6) 에 저장.
 
 		int min = 100;
 		int max = 0;
