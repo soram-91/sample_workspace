@@ -23,15 +23,17 @@ public class MemberApp implements MemberService {
 			selectNo = Integer.parseInt(scn.nextLine());
 			switch (selectNo) {
 			case 1:
+				System.out.println("1.도서반 2.축구반 3.수영반");
+				System.out.println("선택하세요.");
+				int classNo =Integer.parseInt(scn.nextLine());
+				
 				System.out.println("회원아이디를 입력하세요");
 				int id = Integer.parseInt(scn.nextLine());
 				System.out.println("회원이름을 입력하세요");
 				String name = scn.nextLine();
 				System.out.println("연락처를 입력하세요");
 				String phone = scn.nextLine();
-				System.out.println("1.도서반 2.축구반 3.수영반");
-				System.out.println("선택하세요.");
-				int classNo =Integer.parseInt(scn.nextLine());
+				
 				if(classNo == 1) {
 					
 					System.out.println("반장이름을 입력하세요.");

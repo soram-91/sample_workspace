@@ -19,19 +19,22 @@ public class StudentApp {
 			selectNo = Integer.parseInt(scn.nextLine());
 			switch(selectNo) {
 			case 1: 
+				
+				System.out.println("1.고등학생 2. 대학생");
+				System.out.println("선택> ");
+				selectNo = Integer.parseInt(scn.nextLine());
+				
+				
 				System.out.println("학생이름을 입력하세요");
 				String name = scn.nextLine();
-		
+
 				System.out.println("번호를 입력하세요");
 				String no =scn.nextLine();
 			
 				System.out.println("점수를 입력하세요");
 				int score = Integer.parseInt(scn.nextLine());
 				
-				System.out.println("1.고등학생 2. 대학생");
-				System.out.println("선택> ");
-				selectNo = Integer.parseInt(scn.nextLine());
-				
+								
 				if(selectNo == 1) {
 //					고등학생정보 : 담임교사, 학년 정보 추가.
 					System.out.println("고등학교 담임교사 이름을 입력하세요");
@@ -57,7 +60,7 @@ public class StudentApp {
 				System.out.println("수정할 점수를 입력하세요.");
 				int modScore =Integer.parseInt(scn.nextLine());
 				
-				modStudent(new Student(modNo,null,modScore));
+				modStudent(new Student(modNo,modScore));
 				break;
 			case 3 :
 				studentList();
@@ -76,7 +79,7 @@ public class StudentApp {
 	
 	public void modStudent(Student student) {
 		for(int i =0; i<list.size(); i++) {
-			if(student.getStudNo()== list.get(i).getStudNo()) {
+			if(student.getStudNo().equals(list.get(i).getStudNo())) {
 				list.get(i).setScore(student.getScore());
 			}
 		}

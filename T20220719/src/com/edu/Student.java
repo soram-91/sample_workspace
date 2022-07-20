@@ -9,12 +9,20 @@ public class Student {
 	public Student() {
 	}
 	
+	public Student(String studNo , int score) {
+		super();
+		this.studNo = studNo;
+		this.score = score;
+	}
+	
 	public Student(String studName, String studNo , int score) {
 		super();
 		this.studNo = studNo;
 		this.studName = studName;
 		this.score = score;
 	}
+	
+
 
 	public String getStudNo() {
 		return studNo;
