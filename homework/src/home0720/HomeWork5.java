@@ -10,7 +10,9 @@ public class HomeWork5 {
 		// 2 X 2 = 4
 		// 2 X 3 = 6
 		Scanner scn = new Scanner(System.in);
+		System.out.println("m값을 입력하세요>");
 		int m = scn.nextInt();
+		System.out.println("n값을 입력하세요>");
 		int n = scn.nextInt();
 	
 		for (int i = 1; i <= n ; i++) {
