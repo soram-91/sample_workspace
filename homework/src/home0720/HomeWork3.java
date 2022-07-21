@@ -15,6 +15,7 @@ public class HomeWork3 {
 						case "가위": System.out.println("이기기 위해선 바위를 내야합니다."); break;
 						case "보" : System.out.println("이기기 위해선 가위를 내야합니다."); break;
 						case "바위":	System.out.println("이기기 위해선 보를 내야합니다.");  break;
+						default : System.out.println("가위, 바위, 보 중에서 입력해야합니다.");
 					}
 	}
 }
