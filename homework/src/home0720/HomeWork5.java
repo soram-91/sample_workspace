@@ -13,8 +13,8 @@ public class HomeWork5 {
 		int m = scn.nextInt();
 		int n = scn.nextInt();
 	
-		for (n = 1; n-1 <= m; n++) {
-			System.out.println(m + " x " + n + " = " + m * n);
+		for (int i = 1; i <= n ; i++) {
+			System.out.println(m + " x " + i + " = " + m * i);
 		}
 		
 	}
