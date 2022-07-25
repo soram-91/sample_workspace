@@ -14,8 +14,10 @@ public class HomeWork {
 		// 4) 분석기능은 최고 가격을 가지는 제품과 해당 제품을 제외한 제품들의 총합을 구합니다.
 		// 5) 종료 시에는 프로그램을 종료한다고 메세지를 출력하도록 구현하세요.
 		Scanner scn = new Scanner(System.in);
-		String [] list = null;
-				
+		int[] list = null;
+		String[] name = null;
+		int[] price = null;
+
 		boolean run = true;
 		while (run) {
 			System.out.println("1.상품 수 | 2.상품 및 가격입력 | 3.제품별 가격 | 4.분석 | 5.종료");
@@ -27,24 +29,26 @@ public class HomeWork {
 			case 1:
 				System.out.println("상품 수를 입력하세요.");
 				int itemNo = scn.nextInt();
-				list = new String[itemNo];
+				list = new int[itemNo];
 				break;
 			case 2:
 				for (int i = 0; i < list.length; i++) {
 					System.out.println("상품을 입력하세요");
-					String name = scn.nextLine();
-										
-					System.out.println("가격을 입력하세요");
-					String price = scn.nextLine();
-
-					list = new String[] {name,price};
+					String name1 = scn.nextLine();
+					scn.nextLine();
+					name = new String[] {name1};
 					
+					System.out.println("가격을 입력하세요");
+					int price1 = Integer.parseInt(scn.nextLine());
+					price = new int[] {price1};
 				}
 				break;
+
 			case 3:
-				for(int i = 0; i<list.length; i++) {
-					System.out.print(list[i] + " : " + list[++i] + "\n");
-					
+				for (int i = 0; i < name.length; i++) {
+					for(int j = 0; j < price.length; j++) {
+					System.out.print(list.length + " " + name[i] + " : " + price[j]+ "\n");
+					}
 				}
 
 				break;
@@ -55,8 +59,7 @@ public class HomeWork {
 				run = false;
 			}
 		}
-		
-	}
 
+	}
 
 }
