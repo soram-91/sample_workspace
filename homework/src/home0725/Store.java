@@ -17,14 +17,6 @@ public class Store {
 		this.price = price;
 	}
 
-	public int getItemNo() {
-		return itemNo;
-	}
-
-	public void setItemNo(int itemNo) {
-		this.itemNo = itemNo;
-	}
-
 	public String getName() {
 		return name;
 	}
@@ -40,6 +32,13 @@ public class Store {
 	public void setPrice(int price) {
 		this.price = price;
 	}
+	
+//	public void maxPriceItem() {
+//		
+//		for(int i =0; i<list.length; i++) {
+//			if()
+//		}
+//	}
 	
 	
 }

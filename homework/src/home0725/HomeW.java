@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class HomeW2 {
-	
+public class HomeW {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
 		
-		List<Store> store = new ArrayList<Store>();
+		String[] list = null;
+		int [] priceList = null;
 		Store str = new Store();
 		
 		boolean run = true;
@@ -23,22 +23,26 @@ public class HomeW2 {
 			case 1:
 				System.out.println("상품 수를 입력하세요.");
 				int itemNo = Integer.parseInt(scn.nextLine());
-				
+				list = new String[itemNo];
+				priceList = new int[itemNo];
 				break;
 			case 2:
-				
+				for(int i =0; i < list.length; i++) {
 					System.out.println("상품을 입력하세요");
 					String name = scn.nextLine();
-										
+					str.setName(name);					
 					System.out.println("가격을 입력하세요");
 					int price = Integer.parseInt(scn.nextLine());
+					str.setPrice(price);
+				}
+					
 
-					store.add(new Store(name,price));
+					
 					
 				break;
 			case 3:
-				for(int i = 0; i< store.size(); i++) {
-					System.out.println("제품명: " + store.get(i).name+", 가격: " +store.get(i).price);
+				for(int i = 0; i< list.length; i++) {
+					System.out.println("제품명: " + str.getName() +", 가격: " + str.getPrice());
 								
 				}
 
@@ -49,13 +53,13 @@ public class HomeW2 {
 				String maxItem = null;
 				int sum = 0;
 				int others = 0;
-				for(int i = 0; i< store.size(); i++) {
-					if(store.get(i).price > max) {
-						max = store.get(i).price;
-						maxItem = store.get(i).name;
+				for(int i = 0; i< list.length; i++) {
+					if(str.getPrice() > max) {
+						max = str.getPrice();
+						maxItem = str.getName();
 					}
-					sum += store.get(i).price;
-					others = sum = max;
+					sum += str.getPrice();
+					others = sum-max;
 					}
 				
 				System.out.println("최고 가격을 가지는 제품 : " + maxItem + ", 해당 제품을 제외한 제품들의 총합 : " + others);
@@ -68,5 +72,4 @@ public class HomeW2 {
 		
 	}
 
-	}
-
+}
