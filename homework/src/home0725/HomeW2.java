@@ -32,7 +32,7 @@ public class HomeW2 {
 										
 					System.out.println("가격을 입력하세요");
 					int price = Integer.parseInt(scn.nextLine());
-
+					
 					store.add(new Store(name,price));
 					
 				break;

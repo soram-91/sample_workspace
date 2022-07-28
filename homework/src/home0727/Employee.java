@@ -27,11 +27,6 @@ public class Employee {
 	}
 	// 이름과 연봉을 출력하는 기능
 	public void getInformation() {
-		Scanner scn = new Scanner(System.in);
-		System.out.println("이름을 입력하세요");
-		name = scn.nextLine();
-		System.out.println("연봉을 입력하세요");
-		salary = Integer.parseInt(scn.nextLine());
 		System.out.println("이름: " + name+ " 연봉: "+ salary);
 	}
 	

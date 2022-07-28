@@ -7,9 +7,10 @@ package home0727;
 // 변수는 Human 클래스 타입으로 선언하여 하나만 사용한다.
 public class HumanApp {
 	public static void main(String[] args) {
-		StandardWeightInfo swInfo = new StandardWeightInfo();
-		ObesityInfo oInfo = new ObesityInfo();
-		
+		StandardWeightInfo swInfo = new StandardWeightInfo("홍길동",168,45);
+		ObesityInfo oInfo = new ObesityInfo("박둘이",168,90);
+		swInfo.getStandardWeight();
+		oInfo.getObesity();
 		swInfo.getInformation();
 		oInfo.getInformation();
 		
