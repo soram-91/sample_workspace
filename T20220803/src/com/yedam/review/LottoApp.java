@@ -36,14 +36,14 @@ public class LottoApp {
 		System.out.println("금액을 투입해주세요.");
 		System.out.println(">");
 		int money = Integer.parseInt(sc.nextLine());
-		for (int i = 0; i < money / 1000; i++) {
+		for (int i = 0; i < money / 1000 /*로또 횟수*/ ; i++) {
 			list.add(makeNumber());
 		}
 		System.out.println("번호 출력 완료");
 	}
 
 	private int[] makeNumber() {
-		int[] lottoNo = new int[6];
+		int[] lottoNo = new int[6]; // 로또 번호 한번에 6개 출력
 
 		for (int i = 0; i < 6; i++) {
 			int randomNo = (int) (Math.random() * 45) + 1;

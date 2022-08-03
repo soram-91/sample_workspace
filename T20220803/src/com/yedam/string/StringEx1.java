@@ -19,10 +19,11 @@ public class StringEx1 {
 		System.out.println("주민등록번호를 입력하세요");
 		String rrn = new String(scn.nextLine());
 		int year =Integer.parseInt(rrn.substring(0, 2)); // 99 -> 1999 / 00 -> 2000
-		if(year<=99) {
+		if(year>23) {
 			year = 1900 + year;
 			age = 2022 - year;
-		} else  {
+		} 
+		if(year<=23)  {
 			year = 2000 + year;
 			age = 2022 - year;
 		}
