@@ -20,12 +20,12 @@ public class StringEx1 {
 		String rrn = new String(scn.nextLine());
 		int year =Integer.parseInt(rrn.substring(0, 2)); // 99 -> 1999 / 00 -> 2000
 		if(year>23) {
-			year = 1900 + year;
-			age = 2022 - year;
+//			year = 1900 + year; 
+			age = 122 - year; // 금년 기준으로 100년이 넘어 간 경우는 제외하므로 122
 		} 
 		if(year<=23)  {
-			year = 2000 + year;
-			age = 2022 - year;
+//			year = 2000 + year;
+			age = 22 - year;
 		}
 		System.out.println("생년월일 : " +rrn.substring(0, 6) +", 나이: " + age);
 		
