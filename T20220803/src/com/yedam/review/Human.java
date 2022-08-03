@@ -1,5 +1,4 @@
-package home0727;
-
+package com.yedam.review;
 //1) Human 클래스를 정의한다.
 //- 이름과 키, 몸무게를 필드로 가지며 생성자를 이용하여 값을 초기화한다.
 //- 메소드는 다음과 같이 정의한다.
@@ -9,10 +8,6 @@ public class Human {
 	double height;
 	double weight;
 	
-	public Human() {
-		
-	}
-	
 	public Human(String name, double height, double weight) {
 		this.name = name;
 		this.height = height;
@@ -20,6 +15,6 @@ public class Human {
 	}
 	
 	public void getInformation() {
-		System.out.println(name + "님의 신장 " + height + ", 몸무게 " + weight);
+		System.out.println("이름 : " + name + ",키 : " + height + ", 몸무게: " + weight);
 	}
 }

@@ -12,29 +12,23 @@ public class ahffk {
 		Scanner scn = new Scanner(System.in);
 		String[] fruits = { "사과", "딸기", "감", "수박", "포도", "복숭아" };
 		System.out.println("과일 이름을 입력하세요>> ");
-		String fruitsName = scn.nextLine();
-		int i = 0;
-		boolean isTrue = true;
 
-		while (isTrue) {
-			for (i = 0; i < fruits.length; i++) {
-				if (fruitsName.equals(fruits[i])) {
-					System.out.println("과일: " + fruitsName);
-				} else {
-					isTrue = false;
-				}
+		boolean run = true;
+		while (run) {
+			String fruitsName = scn.nextLine();
+			int no = 0; // 존재 하는 과일의 수
+			if (no >= 1) {
+				for (int i = 0; i < fruits.length; i++) {
+					if (fruitsName.equals(fruits[i])) {
+						fruitsName = fruits[i];
+						System.out.println("찾는 과일이 있습니다.");
+						System.out.println("과일이름 : " + fruitsName);
+					} // end of if
+				} // end of for
+			} else if (no == 0) {
+				System.out.println("찾는 값이 없습니다.");
 			}
-		}  System.out.println("찾는 값이 없습니다.");
+
+		}
 	}
 }
-
-/*
- * for (i = 0; i < fruits.length; i++) { if (fruitsName.equals(fruits[i])) {
- * System.out.println("과일: " + fruitsName); } else {
- * System.out.println("찾는 값이 없습니다."); } }
- */
-/*
- * if (fruitsName.equals(fruits[i])) { for (i = 0; i < fruits.length; i++ ) {
- * System.out.println("과일: " + fruitsName); } } else {
- * System.out.println("찾는 값이 없습니다."); }
- */

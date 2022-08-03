@@ -9,8 +9,8 @@ import java.util.Scanner;
 //	(1) public void getInformation() : 이름과 연봉을 출력하는 기능
 //	(2) public void print() : "수퍼클래스"란 문구를 출력하는 기능
 public class Employee {
-	String name;
-	int salary;
+	protected String name;
+	protected int salary;
 	
 	public Employee() {
 		
