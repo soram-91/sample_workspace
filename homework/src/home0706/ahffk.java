@@ -17,18 +17,24 @@ public class ahffk {
 		while (run) {
 			String fruitsName = scn.nextLine();
 			int no = 0; // 존재 하는 과일의 수
+			no++;
 			if (no >= 1) {
 				for (int i = 0; i < fruits.length; i++) {
 					if (fruitsName.equals(fruits[i])) {
 						fruitsName = fruits[i];
 						System.out.println("찾는 과일이 있습니다.");
 						System.out.println("과일이름 : " + fruitsName);
-					} // end of if
+					
+						break;
+					} else {
+						no = 0;
+						System.out.println("찾는 값이 없습니다.");
+						run = false;
+					}
 				} // end of for
-			} else if (no == 0) {
-				System.out.println("찾는 값이 없습니다.");
-			}
 
+			}
 		}
 	}
+
 }
