@@ -7,6 +7,8 @@ import java.util.Scanner;
  * Scanner 클래스를 사용하여 사용자가 입력한 값을 다음의 배열에서 찾아서 값이 있을 경우에는 해당 값의 저장위치를 값이 없을 경우에는
  * 찾는 값이 없습니다는 메세지를 보여주도록 기능을 작성하세요.
  */
+
+//while(!menuNo.equals("99")) {
 public class ahffk {
 	public static void main(String[] args) {
 		Scanner scn = new Scanner(System.in);
@@ -26,7 +28,7 @@ public class ahffk {
 						System.out.println("과일이름 : " + fruitsName);
 					
 						break;
-					} else {
+					} else if (!(fruitsName.equals(fruits[i]))) {
 						no = 0;
 						System.out.println("찾는 값이 없습니다.");
 						run = false;
