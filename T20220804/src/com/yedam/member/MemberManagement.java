@@ -10,6 +10,7 @@ public class MemberManagement extends DAO{
 	
 	// 1. 자기자신으로 만든 인스턴스
 	private static MemberManagement mm = null;
+	// MemberManagement mm = new MemberManagement();
 	
 	private MemberManagement() {}
 	
