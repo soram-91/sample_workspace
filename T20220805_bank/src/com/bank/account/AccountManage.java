@@ -1,5 +1,8 @@
 package com.bank.account;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import com.bank.common.DAO;
 
 public class AccountManage extends DAO {
@@ -44,12 +47,13 @@ public class AccountManage extends DAO {
 			// class 계산한 데이터를 바로 넣어주면 됨.
 			// 다른 연산 필요없이 가능.
 			// 현재 잔고를 가져오는 query
+			
 			String sql2 = "select balance from account where account_id = ?";
 			pstmt = conn.prepareStatement(sql2);
 			pstmt.setString(1, account.getAccountId());
 			rs = pstmt.executeQuery();
 
-			int balance = 0;
+			int balance = 0; // balance : 잔고
 
 			if (rs.next()) {
 //				rs.getInt(balance);
@@ -62,10 +66,19 @@ public class AccountManage extends DAO {
 				// balance = > 현재 잔고
 				// account.getBalance() => 입금하고자 하는 금액
 				// balance+account.getBalance() => 입금한 금액
+				
 				account.setBalance(balance + account.getBalance());
+				String sql = "update account set balance = ? where account_id = ?";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.setInt(1, account.getBalance());
+				pstmt.setString(2, account.getAccountId());
+
+				result = pstmt.executeUpdate();
+				
 			} else if (cmd == 2) {
 				// 잔고 < 출금액
 				if (balance - account.getBalance() >= 0) {
+									   // 잔고 - 출금하고자 하는 금액
 					account.setBalance(balance - account.getBalance());
 
 					String sql = "update account set balance = ? where account_id = ?";
@@ -95,7 +108,7 @@ public class AccountManage extends DAO {
 		int result = 0;
 		try {
 			conn();
-			String sql = "delete account_id from account where account_id = ?";
+			String sql = "delete account where account_id = ?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, accountId);
 
@@ -149,6 +162,36 @@ public class AccountManage extends DAO {
 		} finally {
 			disconnect();
 		}
-
+	}
+	
+	// 계좌 조회
+	public List<Account> getAccountList(String memberId){
+		List<Account> list = new ArrayList<>();
+		Account account = null;
+		
+		try {
+			conn();
+			String sql = "select * from account where member_id = ?";
+			pstmt=conn.prepareStatement(sql);
+			pstmt.setString(1, memberId);
+			
+			rs = pstmt.executeQuery();
+			
+			while(rs.next()) {
+				account = new Account();
+				account.setAccountId(rs.getString("account_id"));
+				account.setMemberId(rs.getString("member_id"));
+				account.setCredate(rs.getDate("creDate"));
+				account.setBalance(rs.getInt("balance"));
+				
+				list.add(account);
+			}
+		}catch(Exception e) {
+			
+		}finally {
+			disconnect();
+		}
+		
+		return list;
 	}
 }

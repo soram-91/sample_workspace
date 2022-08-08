@@ -29,6 +29,12 @@ public class MemberService {
 	// 로그아웃
 	public void logout() {
 			memberInfo = null;
+			if(memberInfo != null) {
+			  doLogin();			
+			} else {
+				memberInfo = null;
+				System.out.println("로그아웃되었습니다.");
+			}
 		}
 	// 고객 등록
 	public void registerCustomer() {

@@ -29,7 +29,9 @@ public class MemberManage extends DAO {
 			
 			if(rs.next()) {
 				member = new Member();
-				member.setAccountId(rs.getString("member_id"));
+				// MemberManage -> 로그인 메소드
+				// setAccountId -> setMemberId
+				member.setMemberId(rs.getString("member_id"));
 				member.setMemberPw(rs.getString("member_pw"));
 				member.setMemberName(rs.getString("member_name"));
 				member.setRole(rs.getString("role"));

@@ -23,11 +23,11 @@ public class Application {
 			ms.doLogin();
 			if (MemberService.memberInfo != null) {
 				new ManageMent();
-
 			}
+			
 			break;
 		case 2:
-			// 나중에
+			System.out.println("프로그램 종료");
 			break;
 		}
 	}
