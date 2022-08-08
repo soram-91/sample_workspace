@@ -51,7 +51,7 @@ public class CoffeeDAO extends DAO {
 		
 		try {
 			conn();
-			String sql = "select coffee_menu, coffee_sales, coffee_explain from coffee";
+			String sql = "select coffee_menu, coffee_price, coffee_explain from coffee";
 			stmt = conn.createStatement();
 			
 			rs= stmt.executeQuery(sql);
@@ -59,7 +59,7 @@ public class CoffeeDAO extends DAO {
 			while(rs.next()) {
 				coffee = new Coffee();
 				coffee.setCoffeeMenu(rs.getString("coffee_menu"));
-				coffee.setCoffeeSales(rs.getInt("coffee_sales"));
+				coffee.setCoffeePrice(rs.getInt("coffee_price"));
 				coffee.setCoffeeExplain(rs.getString("coffee_explain"));
 				
 				list.add(coffee);
@@ -111,7 +111,26 @@ public class CoffeeDAO extends DAO {
 		}
 		return result;
 	}
-
+//	public int updateSales(Coffee coffee) {
+//		int result = 0;
+//		try {
+//			conn();
+//			String sql= "update coffee set coffee_sales = ? where coffee_menu = ?";
+//			pstmt = conn.prepareStatement(sql);
+//			pstmt.setInt(1, coffee.getCoffeeSales());
+//			pstmt.setString(2, coffee.getCoffeeMenu());
+//			
+//			result = pstmt.executeUpdate();
+//			
+//		}catch(Exception e) {
+//			e.printStackTrace();
+//		}finally {
+//			disconnect();
+//		}
+//		
+//		return result;
+//	}
+	
 	// 판매 (단, 해당 기능 실행 시 1잔씩 판매)
 	public int salesCoffee(String coffeeMenu) {
 		int result = 0;

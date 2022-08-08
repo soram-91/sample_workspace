@@ -17,7 +17,7 @@ public class CoffeeService {
 
 	// 메뉴 상세조회
 	public void getDetailCoffee() {
-		List<Coffee> list = CoffeeDAO.getInstance().getCoffee();
+		List<Coffee> list = CoffeeDAO.getInstance().getDetailCoffee();
 		for(int i = 0; i < list.size(); i++) {
 			System.out.print("메뉴 : " + list.get(i).getCoffeeMenu() + ", 가격 : " + list.get(i).getCoffeePrice()+", 설명 : " + list.get(i).getCoffeeExplain()+"\n");
 		}
@@ -54,9 +54,10 @@ public class CoffeeService {
 		coffee.setCoffeeMenu(menu);
 		
 		int result = CoffeeDAO.getInstance().salesCoffee(menu);
-		
+
 		if(result == 1) {
 			System.out.println("판매량 완료");
+			result++;
 		} else {
 			System.out.println("판매량 실패");
 		}
@@ -76,15 +77,20 @@ public class CoffeeService {
 	}
 	// 매출
 	public void calCoffee() {
-		List<Coffee> list = CoffeeDAO.getInstance().getDetailCoffee();
+		List<Coffee> list = CoffeeDAO.getInstance().getDetailCoffee(); // 메뉴, 가격, 설명 || 판매량 = salesCoffee(coffeeMenu)
 		int sum = 0;
-		
-		for(int i =0; i < list.size(); i++) {
-			System.out.println("메뉴: " + list.get(i).getCoffeeMenu() + ", 판매갯수: " + list.get(i).getCoffeeSales()
-					+ ", 판매 금액: " + (list.get(i).getCoffeeSales()*list.get(i).getCoffeePrice()));
-			sum += (list.get(i).getCoffeeSales()*list.get(i).getCoffeePrice());
-					}
-		
+		for(Coffee coffee : list) {
+
+			int sales = CoffeeDAO.getInstance().salesCoffee(coffee.getCoffeeMenu());
+			
+				System.out.println("메뉴 : " + coffee.getCoffeeMenu()
+				+ ", 판매량 : " + sales + ", 판매금액 : "
+				+ coffee.getCoffeePrice()* sales);
+				
+//			}
+			sum += (coffee.getCoffeePrice()*sales);
+			
+		} // end of for
 		System.out.println("총 판매금액 : " + sum + "원 입니다.");
 		
 	}

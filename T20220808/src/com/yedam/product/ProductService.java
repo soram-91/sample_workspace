@@ -20,7 +20,7 @@ public class ProductService {
 
 	// 상품 상세 조회
 	public void getDetailProduct() {
-		List<Product> list = ProductDAO.getInstance().getProduct();
+		List<Product> list = ProductDAO.getInstance().getDetailProduct();
 
 		for (Product product : list) {
 			System.out.println("***************************************");
