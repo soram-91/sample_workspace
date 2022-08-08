@@ -33,13 +33,14 @@ public class MemberManage extends DAO {
 			pstmt.setString(2, member.getMemberPw());
 
 			rs = pstmt.executeQuery();
-
+			
 			if (rs.next()) {
 				mem = new MemberDTO();
 				mem.setMemberId(rs.getString("member_id"));
 				mem.setMemberPw(rs.getString("member_pw"));
 				mem.setMemberName(rs.getString("member_name"));
 				mem.setMemberBelong(rs.getString("member_belong"));
+				
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -47,6 +48,6 @@ public class MemberManage extends DAO {
 			disconnect();
 		}
 
-		return mem;
+		return member;
 	}
 }
