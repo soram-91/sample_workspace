@@ -21,7 +21,9 @@ public class MemberService {
 		// DB 조회한 정보와 내가 입력한 pw 비교
 		if(member.getMemberPw().equals(pw)) {
 			memberInfo = member;			
-		} else {
+		} else if(!member.getMemberId().equals(id)) {
+			System.out.println("잘못된 아이디 입니다.");
+		} else if(!member.getMemberPw().equals(pw)) {
 			System.out.println("잘못된 비밀번호 입니다.");
 		}
 	}

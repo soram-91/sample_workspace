@@ -16,6 +16,7 @@ public class Application {
 
 	private void run() {
 		System.out.println("1.로그인 | 2.종료");
+		System.out.println("입력>");
 		menuNo = Integer.parseInt(sc.nextLine());
 		switch (menuNo) {
 		case 1:
@@ -24,7 +25,6 @@ public class Application {
 			if (MemberService.memberInfo != null) {
 				new ManageMent();
 			}
-			
 			break;
 		case 2:
 			System.out.println("프로그램 종료");
